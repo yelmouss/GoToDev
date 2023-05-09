@@ -1,38 +1,89 @@
 .App {
-  text-align: center;
+  background-image: url('./img/BackLeft.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  animation-delay: 0s;
+  animation-duration: 30s;
+  animation-name: panoramic;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes panoramic {
+  0% {
+    background-position-y: 0%;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  50% {
+    background-position-y: 100%;
+  }
+
+  100% {
+    background-position-y: 0%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.text-fun-pink:hover {
+  color: #55acee;
+  transform: scale(2, 3);
+  font-size: 18px;
+}
+.Mycard { background-color: rgba(245, 245, 245, 0.4); }
+
+
+.IconService{
+  font-size: 72px;
+  color: #2e71d5;
+  margin-top: 5% ;
+}
+
+.object-fit{
+  object-fit: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Mycontainer {
+  position: relative;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MyShadow {
+  box-shadow: 17px 20px 5px 0px rgba(46,113,213,0.51);
+  -webkit-box-shadow: 17px 20px 5px 0px rgba(46,113,213,0.51);
+  -moz-box-shadow: 17px 20px 5px 0px rgba(46,113,213,0.51);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.shaked {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
