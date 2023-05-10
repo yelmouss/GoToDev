@@ -44,7 +44,7 @@ const Home = ({ dark, updatedark }) => {
             <Col>
               <div className='text-center bg-light  bg-opacity-25 rounded p-2 h-100 border'>
                 <h1>
-                  <CountUp end={item.Count} duration={20} className="text-primary fs-1 fw-bolder fst-italic" />
+                  <CountUp end={item.Count} duration={5} className="text-primary fs-1 fw-bolder fst-italic" />
                 </h1>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
@@ -80,10 +80,17 @@ const Home = ({ dark, updatedark }) => {
         <Tabs
           defaultActiveKey="profile"
           id="uncontrolled-tab-example"
-          className="mb-3 d-flex justify-content-center fw-bold"
+          className="mb-3 d-flex justify-content-center fw-bold text-light p-2"
         >
           {SOLUTIONS.map((item, i) => (
-            <Tab eventKey={item.title} title={<div style={{ width: "120px" }} className={` bg-light rounded bg-opacity-10 text-truncate ${dark ? " text-primary" : " light "}`}>{item.title} <hr />  <span className='fs-1'>{item.Icon}</span></div>}>
+            <Tab eventKey={item.title} title={<div style={{ width: "120px" }}
+              className={`GrandientBG  rounded bg-opacity-10 text-truncate ${dark ? "text-light " : " text-light "}`}>
+              {item.title} <hr />
+              <div className="text-success" style={{color : "White"}}>
+              {item.Icon}
+              </div>
+            
+            </div>}>
               <Row>
                 <Col className='fs-1   border-end'>
                   {item.Question}
@@ -123,8 +130,8 @@ const Home = ({ dark, updatedark }) => {
         <Row className='d-flex justify-content-center text-center col-10'>
           {Resources.map((item, i) => (
             <Col lg={2} className='m-2 border'>
-              <div className="Mycontainer ">
-                <div class="centered">  <CountUp end={item.Number} duration={20} className="text-primary fs-1 fw-bolder fst-italic" /></div>
+              <div className="Mycontainer">
+                <div class="centered">  <CountUp end={item.Number} duration={2} className={`fs-1 fw-bolder fst-italic mb-5 ${dark ? "text-light" : "text-dark"}`} /></div>
                 <img src={Numbers} alt="Snow" className='img-fluid ' />
               </div>
               <hr />
