@@ -28,21 +28,30 @@ const Footer = ({ dark, updateDark }) => {
                     </Col>
                     <Col>
                         <Font family='Ubuntu'>
-                            <h3>Contact Information</h3>
-                            <hr />
-                            <h5>Tel Direction</h5>
-                            <p>+212 312865681</p>
-                            <hr />
-                            <h3>   About GoToDev</h3>
-                            Mentions légales
-                            Politique de confidentialité
-                            NOUS CONTACTER
-                            Contact
-                            Adresses de nos sites
-                            NOUS REJOINDRE
-                            Nos offres d’emploi
-                            Talent Academy
+                            <div style={{ fontSize: "15px" }}>
+                                <h3>   About GoToDev</h3>
+                                <hr />
+                                <Row className="p-4">
+                                    <Col>
+                                        <h6>Company Name:</h6>
+                                        <p>GoToDev</p>
+                                        <h6>Legal Form:</h6>
+                                        <p>sole proprietorships</p>
+                                        <h6>Address:</h6>
+                                        <p>Résidence TISSIR, Av. Mohamed Triki, Rabat 10090</p>
+                                    </Col>
+                                    <Col>
 
+                                        <h6>Phone:</h6>
+                                        <p>+212 312865681</p>
+                                        <h6> Email: </h6>
+                                        <p>yelmouss.devt@gmail.com</p>
+                                        <h6>Website:</h6>
+                                        <p>www.gotodev.ma</p>
+                                    </Col>
+                                </Row>
+
+                            </div>
                             <br />
 
 
@@ -58,7 +67,7 @@ const Footer = ({ dark, updateDark }) => {
                                     rel="noreferrer" >
                                     <BsGoogle />
                                 </a>
-                 
+
                             </Col>
 
                         </Font>
