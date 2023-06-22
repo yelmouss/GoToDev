@@ -23,7 +23,7 @@ function Header({ dark, updateDark }) {
             fixed="top"
         >
             <Container>
-                <Navbar.Brand href="#home"> {" { GoToDev } ".split("").map((letter, index) => {
+                <Navbar.Brand href="/"> {" { GoToDev } ".split("").map((letter, index) => {
                     return (
                         <span key={index} className="text-fun-pink fs-4">
                             {letter}
@@ -37,8 +37,6 @@ function Header({ dark, updateDark }) {
                         <Link to="/" className='nav-link'>Home</Link>
                         <Link to="/About" className='nav-link'>About us</Link>
                         <Link to="/Expertise" className='nav-link'>Our expertise</Link>
-
-
                     </Nav>
                     <Nav>
                         <Link to="/Expertise" className='nav-link'>Join us</Link>

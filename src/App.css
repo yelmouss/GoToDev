@@ -13,6 +13,12 @@
   animation-fill-mode: both;
 }
 
+@import url("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+}
+
 @keyframes panoramic {
   0% {
     background-position-y: 0%;
@@ -38,7 +44,7 @@
 
 .IconService{
   font-size: 72px;
-  color: #2e71d5;
+  color: #d8dce2;
   margin-top: 5% ;
 }
 
@@ -67,11 +73,11 @@
 
 
 .shaked {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 5s;
+  /* Start the shake animation and make the animation last for 0.5 seconds
+  animation: shake 9s;
 
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
+  /* When the animation is finished, start again 
+  animation-iteration-count: infinite; */
 }
 
 @keyframes shake {
@@ -114,4 +120,52 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+
+.Counters{
+  font-size: 75px;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.bgTeam2{
+  background-image: url('./img/Team2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  animation-delay: 0s;
+  animation-duration: 30s;
+  animation-name: panoramic;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+
+
+@keyframes panoramic {
+  0% {
+    background-position-x: 0%;
+  }
+
+  50% {
+    background-position-x: 100%;
+  }
+
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+.objectfit{
+  object-fit: cover;
+}
+
+.small-card-image {
+  width: 50px;
+  height: 200px;
 }

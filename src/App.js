@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./componnents/pages/Home";
 import Header from "./componnents/Layout/Header";
 import Footer from "./componnents/Layout/Footer";
+import Expertise from "./componnents/pages/Expertise";
+
+import  About from "./componnents/pages/About";
 import { useState,useEffect  } from "react";
 function App() {
   const [dark, updateDark] = useState(null);
@@ -20,7 +23,11 @@ function App() {
         <BrowserRouter>
           <Header dark={dark} updateDark={updateDark}  />
           <Routes>
-            <Route path="/" element={<Home  dark={dark} updateDark={updateDark} />}>
+            {/* */}
+            <Route path="/" element={<Home  dark={dark} updateDark={updateDark} />} />
+            <Route path="/Expertise" element={<Expertise  dark={dark} updateDark={updateDark} />} />
+            <Route path="/About" element={<About  dark={dark} updateDark={updateDark} />}>
+            
               {/* <Route index element={<Home />} /> */}
               <Route path="*" element={<Home dark={dark} updateDark={updateDark}  />} />
             </Route>
