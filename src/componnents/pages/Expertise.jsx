@@ -15,13 +15,13 @@ const Expertise = ({ dark, updatedark }) => {
   document.title = "GoToDev - Expertise";
 
   return (
-    <main className="mt-5">
-      <Container className="my-5">
+    <main>
+      <Container className={` pt-5  ${dark ? '' : 'bg-light bg-opacity-50'}`} fluid>
         <div className="text-end fs-1">
           <h1>Expertise in ..</h1>
         </div>
         <hr />
-        <div className="my-5 fs-5 text-start">
+        <div className={`my-5 fs-5 p-1 text-start container`}>
           <p>
             GoToDev is an IT company that provides a range of services to businesses and organizations looking to build, optimize, and maintain their digital infrastructure. Whether you're a small startup or a large enterprise, we can help you with your IT needs
 
@@ -34,8 +34,6 @@ const Expertise = ({ dark, updatedark }) => {
             ensures visually appealing and intuitive interfaces. With a deep understanding of SEO techniques, we enhance
             online visibility and drive organic traffic. We also manage targeted ad campaigns for maximum reach. Choose{' '}
             <b>GoToDev</b> for tailored solutions that exceed expectations and drive success.
-
-
           </p>
         </div>
         <Row xs={1} sm={2} md={2} lg={4} noGutters>

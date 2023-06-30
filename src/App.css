@@ -136,6 +136,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position-x: 50%;
   animation-delay: 0s;
   animation-duration: 30s;
@@ -143,6 +144,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
+  
 }
 
 

@@ -20,10 +20,10 @@ function Header({ dark, updateDark }) {
             variant={`${dark ? "dark" : "light"}`}
             expand="lg"
             className={`fw-bolder shadow-lg bg-opacity-75 ${dark ? "col-12" : "col-12"}`}
-            fixed="top"
+          
         >
             <Container>
-                <Navbar.Brand href="/"> {" { GoToDev } ".split("").map((letter, index) => {
+                <Navbar.Brand href="/" className='bg-dark bg-opacity-75 text-light rounded p-1'> {" { GoToDev } ".split("").map((letter, index) => {
                     return (
                         <span key={index} className="text-fun-pink fs-4">
                             {letter}
@@ -37,10 +37,12 @@ function Header({ dark, updateDark }) {
                         <Link to="/" className='nav-link'>Home</Link>
                         <Link to="/About" className='nav-link'>About us</Link>
                         <Link to="/Expertise" className='nav-link'>Our expertise</Link>
+                        <Link to="/Legal" className='nav-link'>Legal Notice</Link>
+                        
                     </Nav>
                     <Nav>
-                        <Link to="/Expertise" className='nav-link'>Join us</Link>
-                        <NavDropdown
+                        <Link to="/Expertise" className='nav-link'>Contact us</Link>
+                        {/* <NavDropdown
                             title="Lang">
                             <NavDropdown.Item href="#action4">
                                 FR
@@ -49,7 +51,7 @@ function Header({ dark, updateDark }) {
                             <NavDropdown.Item href="#action5">
                                 EN
                             </NavDropdown.Item>
-                        </NavDropdown>
+                        </NavDropdown> */}
                         <div className="row m-2 fw-bold">
                             {dark ? (
                                 <BsMoon

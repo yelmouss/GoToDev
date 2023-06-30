@@ -15,48 +15,47 @@ import { Card } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
-  
+
 const Home = ({ dark, updatedark }) => {
   document.title = "GoToDev - Home"
 
 
 
   return (
-    <main class="pt-5">
-      <Container className='mt-5'>
-        <Row className=' card bgTeam2 p-5'  >
-          {/* <Col sm={4}>
-            <Container className='d-flex justify-content-center '>
-              <img src={Team1} alt="Team-1" className='img-fluid  shaked' />
-            </Container>
-          </Col> */}
-   
-     
+    <main>
+      <Container fluid>
+        <Row className='bgTeam2 text-center  '  >
           <div className=' bg-dark bg-opacity-50 p-5 text-light '>  <Font family='ubuntu'>
-              <h1 className='fs-1 fw-bold'>Who We Are</h1>
-              <hr />
-              <p className="fs-5" >GoToDev is a benchmark player in Managed Services and Digitalization. With an ambition for
-                significant growth and development, GoToDev has extended its horizons outside Morocco and Africa.
-              </p>              
-            </Font></div>
+            <h1 className='fs-1 fw-bold text-start'>Who We Are</h1>
+            <hr />
+            <p className="fs-5" >"GoToDev is an IT company that provides a range of services to businesses and organizations looking to build,
+             optimize, and maintain their digital infrastructure. Whether you're a small startup or a large enterprise,
+              we can help you with your IT needs."
+          <br /> GoToDev has extended its horizons outside Morocco and Africa.
+            </p>
+          </Font>
+
+            <Row>
+              {ProjectsData.map((item, i) => (
+                <Col lg={4} xs={12}>
+                  <div className='text-center text-light fw-bolder bg-dark  bg-opacity-50 rounded p-2 h-100 border '>
+                    <h1 className='Counters'>
+                      <CountUp end={item.Count} duration={5} className="text fw-bolder" />
+                    </h1>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>
+                      {item.desc}
+                    </Card.Text>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
         </Row>
+
       </Container>
-      <Container className='bg-info p-5  bg-opacity-25 mt-5' fluid>
-        <Row>
-          {ProjectsData.map((item, i) => (
-            <Col lg={4} xs={12}>
-              <div className='text-center text-light fw-bolder bg-dark  bg-opacity-50 rounded p-2 h-100 border '>
-                <h1 className='Counters'>
-                  <CountUp end={item.Count} duration={5} className="text fw-bolder" />
-                </h1>
-                <Card.Title>{item.title}</Card.Title>
-                <Card.Text>
-                  {item.desc}
-                </Card.Text>
-              </div>
-            </Col>
-          ))}
-        </Row>
+      <Container className='bg-info p-5  bg-opacity-25' fluid>
+
         <br />
         <Row className='mt-5 p-2'>
           <Col sm={8}>  <Font family='Ubuntu'>
@@ -79,8 +78,8 @@ const Home = ({ dark, updatedark }) => {
       </Container>
 
 
-      <Container className='mt-5 bg-dark bg-opacity-75 p-5 text-light' fluid>
-        <div className="fs-1 p-2 bg-dark bg-opacity-75 container col-lg-6 ">
+      <Container className=' bg-dark bg-opacity-75 p-5 text-light' fluid>
+        <div className="fs-1 p-2 bg-dark bg-opacity-75 container col-lg-5 ">
           <Font family='Ubuntu' className='fs-1'>
             <h1 className='fs-1 fw-bold text-center'>Our Solutions</h1>
           </Font>
@@ -120,8 +119,7 @@ const Home = ({ dark, updatedark }) => {
               With a wide range of expertise, GoToDev deploys teams of highly qualified engineers to ensure the security and operationalization of your platforms, while maintaining a very high quality front and back office service.
               <br />
               We have developed more than 10 years of expertise in this field in the service of international clients.
-              <br />
-              Our scope of expertise includes IT infrastructure management, Business Intelligence and Consulting. GoToDev intervenes on the 5 stages of the information system.
+
             </p>
           </Font></Col>
         </Row>
@@ -130,9 +128,9 @@ const Home = ({ dark, updatedark }) => {
       <Container className='d-flex justify-content-center bg-info p-5  bg-opacity-25' fluid>
         <Row className='d-flex justify-content-center text-center col-10'>
           {Resources.map((item, i) => (
-            <Col lg={2} md={4} className='m-2 border'>
+            <Col lg={2} md={4} sm={4} className='m-2 border card text-dark text-center'>
               <div className="Mycontainer">
-                <div class="centered ">  <CountUp end={item.Number} duration={2} className={` fw-bolder fst-italic mb-5 Counters ${dark ? "text-light" : "text-dark"}`} /></div>
+                <div class="centered ">  <CountUp end={item.Number} duration={2} className={` fw-bolder fst-italic mb-5 Counters  text-info`} /></div>
                 <img src={Numbers} alt="Snow" className='img-fluid mt-4 ' />
               </div>
               <hr />

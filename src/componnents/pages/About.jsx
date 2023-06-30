@@ -14,25 +14,19 @@ function About({ dark, updateDark }) {
 
   return (
     <>
-      <main className="mt-5 pt-5">
+      <main className="pt-5 min-vh-100" >
 
 
          
-        <Container className='mt-5' >
+        <Container fluid>
           <Font family='Ubuntu'>
-            <Row>
-              <div className="text-end fs-1">
+            <Row className='p-5'>
+              <div className="text-center fs-1">
                 <h1>The Team</h1>
               </div>
-              <hr />
-          
+              <hr />          
               <Col lg={7}>
-
-
                 <Carousel>
-
-
-
                   {InfosTeam.map((item, i) => (
                     <Carousel.Item>
                       <div className="row d-flex justify-content-center">
@@ -49,11 +43,11 @@ function About({ dark, updateDark }) {
                               <p className="fonts">{item.Description}  </p>
                             </div>
                           </div>
-                          <Col className="text-center ">
-                            <a className="fs-1  m-1 btn btn-light" href={item.Github} target="_blank"
+                          <Col className="text-start m-5 ">
+                            <a className="fs-1  m-1 btn " href={item.Github} target="_blank"
                               rel="noreferrer" ><BsGithub /></a>
-                            <ab className="fs-1  m-1 btn btn-light" onClick={() => window.location = `mailto:${item.Mail}`}><BiMailSend /></ab>
-                            <a className="fs-1 m-1 btn btn-light" href={item.Whatsap} target="_blank"
+                            <ab className="fs-1  m-1 btn " onClick={() => window.location = `mailto:${item.Mail}`}><BiMailSend /></ab>
+                            <a className="fs-1 m-1 btn " href={item.Whatsap} target="_blank"
                               rel="noreferrer" ><BsWhatsapp /></a>
                           </Col>
                         </div>
@@ -63,7 +57,6 @@ function About({ dark, updateDark }) {
 
                 </Carousel>
               </Col>
-
               <Col className='bg-dark  d-flex p-5 fw-bold  text-light'>
                 <Font family='Ubuntu'>
                   <h2 className='fs-4'>
@@ -77,11 +70,11 @@ function About({ dark, updateDark }) {
                     we are ready to tackle any project and transform your ideas into reality.</h2>
                 </Font>
               </Col>
-
             </Row>
           </Font>
         </Container>
       </main >
+     <br />
     </>
   );
 
