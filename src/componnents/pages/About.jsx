@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { InfosTeam } from '../../Datas/InfosTeam';
 import Carousel from 'react-bootstrap/Carousel';
 import { BsWhatsapp, BsGithub } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+
 
 import { BiMailSend } from "react-icons/bi";
 

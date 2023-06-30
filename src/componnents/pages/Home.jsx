@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Font from 'react-font'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Team1 from '../../img/Team1.png'
+// import Team1 from '../../img/Team1.png'
 import Azeddine1 from '../../img/azeddine.jpeg'
 import Yassine from '../../img/Yassine.jpg'
 import Numbers from '../../img/Numbers.png'
